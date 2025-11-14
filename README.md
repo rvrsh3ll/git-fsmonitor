@@ -39,6 +39,7 @@ V8: 13.8.258.32-electron.0
 OS: Darwin x64 25.1.0
 ```
 
-https://github.com/user-attachments/assets/4702aadc-f12d-4380-bc6f-bcd564ddcf96
+https://github.com/user-attachments/assets/4702aadc-f12d-4380-bc6f-bcd564ddcf96 
 
-This works because we initialize the repo & then add `core.fsmonitor` to a file (which can be a payload). Hence, opening a folder is enough to execute your code. 
+This works because we initialize the repo & then add `core.fsmonitor` to a file (which can be a payload). Hence, opening a folder is enough to execute your code. "Mostl" devs/users have `~/Downloads` (and similar top-level folders) in their trusted workspace so the PoC runs silently; but if a repo lives outside those trusted paths so IDE will ask “trust this
+  publisher?” prompt before reading `.git/config`.
